@@ -11,6 +11,104 @@
   <link rel="icon" type="image/png" href="logo.png"/>
   <link rel="apple-touch-icon" href="logo.png"/>
   <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Extra styles for the new image sections -->
+  <style>
+    /* ── Hero image behind LEFT text ────────────────────────── */
+    .hero {
+      position: relative;
+    }
+
+    .hero-right {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── Bubble section ────────────────────────────────────── */
+    .bubble-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 80px 0 0;
+      overflow: hidden;
+    }
+    .bubble-img-panel {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+    }
+    .bubble-img-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease;
+    }
+    .bubble-img-panel:hover img {
+      transform: scale(1.04);
+    }
+    .bubble-img-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,.5) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .bubble-text-panel {
+      background: var(--green, #4caf50);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 52px;
+    }
+    .bubble-text-panel .section-label {
+      color: rgba(0,0,0,.6);
+    }
+    .bubble-text-panel h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #000;
+      margin: 12px 0 20px;
+    }
+    .bubble-text-panel p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(0,0,0,.75);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .bubble-text-panel .btn-dark {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .bubble-text-panel .btn-dark:hover { opacity: .8; }
+
+    @media (max-width: 768px) {
+      .bubble-showcase { grid-template-columns: 1fr; }
+      .bubble-img-panel { min-height: 260px; }
+      .bubble-text-panel { padding: 40px 28px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -30,7 +128,7 @@
         <button onclick="showProduct('pallet')">Pallet Wrap</button>
         <button onclick="showProduct('bubble')">Bubble Wrap</button>
         <button onclick="showProduct('refuse')">Refuse Bags</button>
-        <button onclick="showProduct('general')">General Purpose Bags</button>
+        <button onclick="showProduct('general')">Customized Bags</button>
         <button onclick="showProduct('tape')">Adhesive Tape</button>
         <button onclick="showProduct('consumables')">Consumables</button>
       </div>
@@ -53,7 +151,7 @@
   <button class="mobile-nav-sub" onclick="showProduct('pallet')">Pallet Wrap</button>
   <button class="mobile-nav-sub" onclick="showProduct('bubble')">Bubble Wrap</button>
   <button class="mobile-nav-sub" onclick="showProduct('refuse')">Refuse Bags</button>
-  <button class="mobile-nav-sub" onclick="showProduct('general')">General Purpose Bags</button>
+  <button class="mobile-nav-sub" onclick="showProduct('general')">Customized Bags</button>
   <button class="mobile-nav-sub" onclick="showProduct('tape')">Adhesive Tape</button>
   <button class="mobile-nav-sub" onclick="showProduct('consumables')">Consumables</button>
 </div>
@@ -65,43 +163,104 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-bg-pattern"></div>
+
     <div class="hero-left">
       <div class="hero-eyebrow">Since 2014 · Alrode, Johannesburg</div>
-      <h1>Premium<br/><em>Packaging</em><br/>Solutions</h1>
+      <h1>Manufacturer<br/>of<br/><em>Pallet Wrap</em></h1>
       <p class="hero-sub">South Africa's trusted manufacturer of high-performance pallet wrap and packaging materials. Custom sizes, colours, and specifications for every industry.</p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="showPage('products-all')">View Our Products</button>
         <button class="btn-outline" onclick="showPage('contact')">Get a Quote</button>
       </div>
     </div>
+
     <div class="hero-right">
       <div class="hero-visual">
-        <div class="hero-visual-bg"></div>
-        <div class="hero-stat-grid">
-          <div class="hero-stat">
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Years in Business</div>
-          </div>
-          <div class="hero-stat">
-            <div class="stat-num">6</div>
-            <div class="stat-label">Product Lines</div>
-          </div>
-          <div class="hero-stat">
-            <div class="stat-num">70yr</div>
-            <div class="stat-label">Team Experience</div>
-          </div>
-          <div class="hero-stat">
-            <div class="stat-num">0%</div>
-            <div class="stat-label">Manufacturing Waste</div>
-          </div>
+        <img src="machine.jpg" alt="Pallet Wrap" class="hero-image" />
+      </div>
+    </div>
+
+    <div class="hero-scroll">Scroll to explore</div>
+  </div>
+  <!-- GOOGLE MAP – 8A Arnold Street, Alrode -->
+<div style="width:100%;line-height:0;overflow:hidden;">
+  <iframe
+    src="https://maps.google.com/maps?q=8A+Arnold+Street,+Alrode,+Johannesburg,+South+Africa&output=embed"
+    width="100%"
+    height="420"
+    style="border:0;display:block;filter:grayscale(1) contrast(1.1);"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  <!-- WHY CHOOSE US -->
+  
+  
+
+  <!-- PRODUCTS TEASER -->
+  <section style="padding-top: 80px;">
+    <div class="section-label">Our Range</div>
+    <h2 class="section-title">Our<br/>Products</h2>
+    <div class="products-grid">
+      <div class="product-card" onclick="showProduct('pallet')">
+        <div class="product-num">01</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="package-2"></i></span>
+          <h3>Pallet Wrap</h3>
+          <p>Custom LLDPE stretch film in all colours and sizes, with Metallocene technology for maximum performance.</p>
+          <div class="product-link">Learn More</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="showProduct('bubble')">
+        <div class="product-num">02</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="layers"></i></span>
+          <h3>Bubble Wrap</h3>
+          <p>High-quality protective bubble wrap for fragile goods, available in multiple roll sizes and thicknesses.</p>
+          <div class="product-link">Learn More</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="showProduct('refuse')">
+        <div class="product-num">03</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="trash-2"></i></span>
+          <h3>Refuse Bags</h3>
+          <p>Heavy-duty refuse bags for commercial and industrial applications, available in various capacities.</p>
+          <div class="product-link">Learn More</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="showProduct('generalbags')">
+        <div class="product-num">04</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="shopping-bag"></i></span>
+          <h3>Customized Bags</h3>
+          <p>Versatile poly bags for a wide range of industrial and commercial packaging requirements.</p>
+          <div class="product-link">Learn More</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="showProduct('tape')">
+        <div class="product-num">05</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="magnet"></i></span>
+          <h3>Adhesive Tape</h3>
+          <p>Industrial-grade adhesive tape solutions for secure packaging and carton sealing in all industries.</p>
+          <div class="product-link">Learn More</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="showProduct('consumables')">
+        <div class="product-num">06</div>
+        <div class="product-card-inner">
+          <span class="product-icon"><i data-lucide="wrench"></i></span>
+          <h3>Consumables</h3>
+          <p>Supporting packaging consumables to complement our core product range and complete your workflow.</p>
+          <div class="product-link">Learn More</div>
         </div>
       </div>
     </div>
-    <div class="hero-scroll">Scroll to explore</div>
-  </div>
-
-  <!-- WHY CHOOSE US -->
-  <section>
+  </section>
+<section>
     <div class="section-label">Why Multi Stretch</div>
     <h2 class="section-title">Built on<br/>Quality &amp; Trust</h2>
     <p class="section-sub">Owner-managed with hands-on focus, we combine decades of experience with cutting-edge material technology.</p>
@@ -136,78 +295,8 @@
         <h3>Technology Polymers</h3>
         <p>LLDPE Metallocene technology for enhanced durability and compatibility with auto wrap machines.</p>
       </div>
-      <div class="why-card">
-        <div class="why-icon"><i data-lucide="globe"></i></div>
-        <h3>Africa-Wide Reach</h3>
-        <p>Serving Gauteng and exporting to Botswana, Zimbabwe, Lesotho, Zambia and beyond.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"><i data-lucide="handshake"></i></div>
-        <h3>Innovation Partnerships</h3>
-        <p>Continual R&amp;D through close partnerships with raw material and equipment suppliers globally.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS TEASER -->
-  <section style="padding-top: 0;">
-    <div class="section-label">Our Range</div>
-    <h2 class="section-title">Packaging<br/>Solutions</h2>
-    <div class="products-grid">
-      <div class="product-card" onclick="showProduct('pallet')">
-        <div class="product-num">01</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="package-2"></i></span>
-          <h3>Pallet Wrap</h3>
-          <p>Custom LLDPE stretch film in all colours and sizes, with Metallocene technology for maximum performance.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProduct('bubble')">
-        <div class="product-num">02</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="layers"></i></span>
-          <h3>Bubble Wrap</h3>
-          <p>High-quality protective bubble wrap for fragile goods, available in multiple roll sizes and thicknesses.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProduct('refuse')">
-        <div class="product-num">03</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="trash-2"></i></span>
-          <h3>Refuse Bags</h3>
-          <p>Heavy-duty refuse bags for commercial and industrial applications, available in various capacities.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProduct('general')">
-        <div class="product-num">04</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="shopping-bag"></i></span>
-          <h3>General Purpose Bags</h3>
-          <p>Versatile poly bags for a wide range of industrial and commercial packaging requirements.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProduct('tape')">
-        <div class="product-num">05</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="magnet"></i></span>
-          <h3>Adhesive Tape</h3>
-          <p>Industrial-grade adhesive tape solutions for secure packaging and carton sealing in all industries.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProduct('consumables')">
-        <div class="product-num">06</div>
-        <div class="product-card-inner">
-          <span class="product-icon"><i data-lucide="wrench"></i></span>
-          <h3>Consumables</h3>
-          <p>Supporting packaging consumables to complement our core product range and complete your workflow.</p>
-          <div class="product-link">Learn More</div>
-        </div>
-      </div>
+      
+      
     </div>
   </section>
 
@@ -254,7 +343,7 @@
           <li><button onclick="showProduct('pallet')">Pallet Wrap</button></li>
           <li><button onclick="showProduct('bubble')">Bubble Wrap</button></li>
           <li><button onclick="showProduct('refuse')">Refuse Bags</button></li>
-          <li><button onclick="showProduct('general')">General Purpose Bags</button></li>
+          <li><button onclick="showProduct('general')">Customized Bags</button></li>
           <li><button onclick="showProduct('tape')">Adhesive Tape</button></li>
           <li><button onclick="showProduct('consumables')">Consumables</button></li>
         </ul>
@@ -355,27 +444,7 @@
     </div>
   </div>
 
-  <div class="stats-band">
-    <div class="stats-band-inner">
-      <div class="section-label">Experience</div>
-      <h2 class="section-title">70 Years of<br/>Combined Expertise</h2>
-      <p style="font-size:15px;font-weight:300;color:var(--grey);line-height:1.7;max-width:560px;margin-top:16px;">Our skilled, multi-disciplinary team brings over 70 years of collective packaging industry experience — technical know-how you can rely on for every application.</p>
-    </div>
-    <div class="stats-row">
-      <div class="stat-box">
-        <div class="stat-box-num">70+</div>
-        <div class="stat-box-label">Years Combined Experience</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-box-num">6</div>
-        <div class="stat-box-label">Core Product Categories</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-box-num">4+</div>
-        <div class="stat-box-label">African Export Countries</div>
-      </div>
-    </div>
-  </div>
+  
 
   <footer style="margin-top:0;">
     <div class="footer-top">
@@ -397,7 +466,7 @@
           <li><button onclick="showProduct('pallet')">Pallet Wrap</button></li>
           <li><button onclick="showProduct('bubble')">Bubble Wrap</button></li>
           <li><button onclick="showProduct('refuse')">Refuse Bags</button></li>
-          <li><button onclick="showProduct('general')">General Purpose Bags</button></li>
+          <li><button onclick="showProduct('general')">Customized Bags</button></li>
           <li><button onclick="showProduct('tape')">Adhesive Tape</button></li>
           <li><button onclick="showProduct('consumables')">Consumables</button></li>
         </ul>
@@ -436,7 +505,7 @@
       <div class="ghost-num">02</div>
       <div class="icon"><i data-lucide="layers"></i></div>
       <h2>Bubble Wrap</h2>
-      <p>Superior cushioning protection for fragile and sensitive goods. Available in a variety of roll sizes, widths and bubble sizes.</p>
+      <p>Superior cushioning protection for fragile and sensitive goods.</p>
       <div class="arrow">View Product</div>
     </div>
     <div class="big-product-card" onclick="showProduct('refuse')">
@@ -449,8 +518,8 @@
     <div class="big-product-card" onclick="showProduct('general')">
       <div class="ghost-num">04</div>
       <div class="icon"><i data-lucide="shopping-bag"></i></div>
-      <h2>General Purpose Bags</h2>
-      <p>Versatile poly bags for a wide range of industrial and commercial packaging applications. Custom sizes available.</p>
+      <h2>Customized  Bags</h2>
+      <p>Versatile poly bags for a wide range of industrial and commercial packaging applications.</p>
       <div class="arrow">View Product</div>
     </div>
     <div class="big-product-card" onclick="showProduct('tape')">
@@ -590,7 +659,7 @@
             <option>Pallet Wrap</option>
             <option>Bubble Wrap</option>
             <option>Refuse Bags</option>
-            <option>General Purpose Bags</option>
+            <option>Customized Bags</option>
             <option>Adhesive Tape</option>
             <option>Consumables</option>
             <option>Multiple Products</option>
