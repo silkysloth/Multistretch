@@ -103,6 +103,22 @@ const products = {
       </div>
     </div>
   </div>
+  <!-- HAND ROLLS -->
+  <div class="range-block reverse">
+    <div class="range-image">
+      <img src="handroll.jpg" alt="Hand Roll Pallet Wrap">
+    </div>
+
+    <div class="range-content">
+      <h2>Hand Rolls</h2>
+
+      <div class="size-list">
+        <div class="size-item">100x15x150</div>
+        <div class="size-item">100x15x200</div>
+        <div class="size-item">Other — on request</div>
+      </div>
+    </div>
+  </div>
 
   
 
