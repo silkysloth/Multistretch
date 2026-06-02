@@ -103,6 +103,7 @@ const products = {
       </div>
     </div>
   </div>
+
   <!-- HAND ROLLS -->
   <div class="range-block reverse">
     <div class="range-image">
@@ -120,8 +121,6 @@ const products = {
     </div>
   </div>
 
-  
-
 </div>
 `
   },
@@ -134,7 +133,6 @@ const products = {
     desc1: 'Our bubble wrap provides exceptional protection for fragile, sensitive, and high-value goods during storage and transit. Multi Stretch supplies high-quality bubble wrap in a range of roll sizes, widths and bubble diameters to suit every application.',
     desc2: 'Whether you need light protective wrapping for consumer goods or heavy-duty cushioning for industrial equipment, our bubble wrap range covers all bases. Available in bulk rolls for high-volume operations.',
     specs: [
-      
       ['Sizes',         '1250x100'],
       ['Roll Lengths',   'Standard & bulk'],
       ['Application',    'General & industrial'],
@@ -152,10 +150,8 @@ const products = {
     <img src="bubblewrap.webp" class="bubble-image">
   </div>
   <div class="bubble-section">
-
   <div class="bubble-hero">
   </div>
-
 </div>
 `
   },
@@ -181,92 +177,77 @@ const products = {
     <img src="refuse.webp" class="refuse-image">
   </div>
 `
-    
   },
+
   generalbags: {
-  label: 'Product 04',
-  title: 'Customized Bags',
-  overviewTitle: 'Custom Packaging Bag Solutions',
+    label: 'Product 04',
+    title: 'Customized Bags',
+    overviewTitle: 'Custom Packaging Bag Solutions',
+    desc1: 'Multi Stretch supplies customized packaging bags tailored to your business requirements. Our bags are manufactured for durability, presentation, and reliable everyday use across commercial and industrial applications.',
+    desc2: 'We offer custom sizing and specifications based on client requirements, ensuring the perfect solution for your packaging and delivery needs.',
+    specs: [
+      ['Sizes', 'Custom on delivery'],
+      ['Application', 'Commercial & industrial'],
+      ['Custom Options', 'Available on request'],
+    ],
+    features: [
+      ['package', 'Custom Sizes', 'Manufactured according to your required dimensions.'],
+      ['settings', 'Tailored Solutions', 'Designed for different packaging applications.'],
+      ['truck', 'Delivery Ready', 'Supplied according to client delivery requirements.'],
+      ['shield-check', 'Durable Material', 'Strong and reliable for everyday use.'],
+    ],
+  },
 
-  desc1: 'Multi Stretch supplies customized packaging bags tailored to your business requirements. Our bags are manufactured for durability, presentation, and reliable everyday use across commercial and industrial applications.',
-
-  desc2: 'We offer custom sizing and specifications based on client requirements, ensuring the perfect solution for your packaging and delivery needs.',
-
-  specs: [
-    ['Sizes', 'Custom on delivery'],
-    ['Application', 'Commercial & industrial'],
-    ['Custom Options', 'Available on request'],
-  ],
-
-  features: [
-    ['package', 'Custom Sizes', 'Manufactured according to your required dimensions.'],
-    ['settings', 'Tailored Solutions', 'Designed for different packaging applications.'],
-    ['truck', 'Delivery Ready', 'Supplied according to client delivery requirements.'],
-    ['shield-check', 'Durable Material', 'Strong and reliable for everyday use.'],
-  ],
-
-  
-  
-},
-tape: {
-  label: 'Product 05',
-  title: 'Adhesive Tape',
-  overviewTitle: 'Industrial Packaging Tape Solutions',
-
-  desc1: 'Multi Stretch supplies high-quality adhesive packaging tape designed for secure carton sealing and industrial packaging applications. Our tapes provide strong adhesion, durability, and reliable performance for warehouses, logistics, and commercial operations.',
-
-  desc2: 'Available in buff, clear, and acrylic options with multiple roll lengths to suit both manual and high-volume packaging environments. Custom specifications are also available on request.',
-
-  specs: [
-    ['Colours', 'Buff, Clear & Acrylic'],
-    ['Sizes', '48x50, 48x100, 48x1000'],
-    ['Application', 'Industrial & commercial packaging'],
-    ['Custom Options', 'Other sizes available on request'],
-  ],
-
-  features: [
-    ['package', 'Strong Adhesion', 'Reliable sealing for cartons and packaging.'],
-    ['layers', 'Multiple Options', 'Available in buff, clear and acrylic finishes.'],
-    ['truck', 'Industrial Use', 'Suitable for warehouses and shipping operations.'],
-    ['settings', 'Custom Sizes', 'Additional specifications available on request.'],
-  ],
-
-  customHTML: `
+  tape: {
+    label: 'Product 05',
+    title: 'Adhesive Tape',
+    overviewTitle: 'Industrial Packaging Tape Solutions',
+    desc1: 'Multi Stretch supplies high-quality adhesive packaging tape designed for secure carton sealing and industrial packaging applications. Our tapes provide strong adhesion, durability, and reliable performance for warehouses, logistics, and commercial operations.',
+    desc2: 'Available in buff, clear, and acrylic options with multiple roll lengths to suit both manual and high-volume packaging environments. Custom specifications are also available on request.',
+    specs: [
+      ['Colours', 'Buff, Clear & Acrylic'],
+      ['Sizes', '48x50, 48x100, 48x1000'],
+      ['Application', 'Industrial & commercial packaging'],
+      ['Custom Options', 'Other sizes available on request'],
+    ],
+    features: [
+      ['package', 'Strong Adhesion', 'Reliable sealing for cartons and packaging.'],
+      ['layers', 'Multiple Options', 'Available in buff, clear and acrylic finishes.'],
+      ['truck', 'Industrial Use', 'Suitable for warehouses and shipping operations.'],
+      ['settings', 'Custom Sizes', 'Additional specifications available on request.'],
+    ],
+    customHTML: `
     <div class="bubble-section">
       <img src="tape.png" class="refuse-image">
     </div>
   `
-},
-consumables: {
-  label: 'Product 06',
-  title: 'Consumables',
-  overviewTitle: 'Washroom & Industrial Consumables',
+  },
 
-  desc1: 'Multi Stretch supplies quality consumable products for commercial, industrial, warehouse, and office environments. Our range includes toilet paper and garage rolls designed for reliable daily use and cost-effective bulk supply.',
-
-  desc2: 'Available in virgin or recycled options with both 1 ply and 2 ply variations to suit different operational requirements. Additional specifications and quantities available on request.',
-
-  specs: [
-    ['Toilet Paper', 'Virgin or Recycled'],
-    ['Ply Options', '1 Ply & 2 Ply'],
-    ['Industrial Rolls', 'Garage Rolls Available'],
-    ['Application', 'Commercial & industrial use'],
-    ['Custom Options', 'Other products on request'],
-  ],
-
-  features: [
-    ['package', 'Bulk Supply', 'Reliable stock availability for business operations.'],
-    ['layers', 'Virgin or Recycled', 'Options available to suit your budget and requirements.'],
-    ['shield-check', 'Quality Material', 'Strong and reliable tissue products for everyday use.'],
-    ['truck', 'Industrial Ready', 'Suitable for offices, factories, warehouses and garages.'],
-  ],
-
-  customHTML: `
+  consumables: {
+    label: 'Product 06',
+    title: 'Consumables',
+    overviewTitle: 'Washroom & Industrial Consumables',
+    desc1: 'Multi Stretch supplies quality consumable products for commercial, industrial, warehouse, and office environments. Our range includes toilet paper and garage rolls designed for reliable daily use and cost-effective bulk supply.',
+    desc2: 'Available in virgin or recycled options with both 1 ply and 2 ply variations to suit different operational requirements. Additional specifications and quantities available on request.',
+    specs: [
+      ['Toilet Paper', 'Virgin or Recycled'],
+      ['Ply Options', '1 Ply & 2 Ply'],
+      ['Industrial Rolls', 'Garage Rolls Available'],
+      ['Application', 'Commercial & industrial use'],
+      ['Custom Options', 'Other products on request'],
+    ],
+    features: [
+      ['package', 'Bulk Supply', 'Reliable stock availability for business operations.'],
+      ['layers', 'Virgin or Recycled', 'Options available to suit your budget and requirements.'],
+      ['shield-check', 'Quality Material', 'Strong and reliable tissue products for everyday use.'],
+      ['truck', 'Industrial Ready', 'Suitable for offices, factories, warehouses and garages.'],
+    ],
+    customHTML: `
     <div class="bubble-section">
       <img src="toilet.jpg" class="refuse-image">
     </div>
   `
-},
+  },
 };
 
 /* ─── PAGE NAVIGATION ─── */
@@ -340,6 +321,42 @@ function closeMobileNav() {
 function toggleMobileNav() {
   const overlay = document.getElementById('mobile-nav-overlay');
   overlay.classList.contains('open') ? closeMobileNav() : openMobileNav();
+}
+
+/* ─── FORM SUBMIT ─── */
+async function handleFormSubmit(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('contact-form');
+  const feedback = document.getElementById('form-feedback');
+  const submitBtn = form.querySelector('.form-submit');
+
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch('https://formspree.io/f/meenvawe', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      window.location.href = 'thankyou.html';
+    } else {
+      feedback.textContent = 'Something went wrong. Please try again.';
+      feedback.style.color = 'red';
+      submitBtn.textContent = 'Send Message →';
+      submitBtn.disabled = false;
+    }
+  } catch (err) {
+    feedback.textContent = 'Network error. Please try again.';
+    feedback.style.color = 'red';
+    submitBtn.textContent = 'Send Message →';
+    submitBtn.disabled = false;
+  }
 }
 
 /* ─── INIT ─── */
