@@ -344,7 +344,7 @@ async function handleFormSubmit(e) {
     });
 
     if (response.ok) {
-      window.location.href = 'thankyou.html';
+      window.location.href = '/thankyou.html';
     } else {
       feedback.textContent = 'Something went wrong. Please try again.';
       feedback.style.color = 'red';
