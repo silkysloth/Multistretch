@@ -1,7 +1,9 @@
 {
-  "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/products", "destination": "/products.html" },
     { "source": "/products/pallet-wrap", "destination": "/product-pallet-wrap.html" },
     { "source": "/products/bubble-wrap", "destination": "/product-bubble-wrap.html" },
     { "source": "/products/refuse-bags", "destination": "/product-refuse-bags.html" },
